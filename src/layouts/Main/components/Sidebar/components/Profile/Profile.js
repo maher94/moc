@@ -28,7 +28,7 @@ const Profile = props => {
   const usersession = JSON.parse(localStorage.getItem('user'));
   const user = {
     name: usersession!=null?usersession.FirstName:"",
-    avatar: usersession!=null?usersession.sexe=="H"?'/images/avatars/avatar_7.png':'/images/avatars/avatar_2.png' :"",
+    avatar: usersession!=null?usersession.sexe=="M"?'/images/avatars/avatar_7.png':'/images/avatars/avatar_2.png' :"",
     bio: usersession!=null?usersession.email:""
   };
 
