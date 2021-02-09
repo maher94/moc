@@ -44,7 +44,7 @@ const AccountProfile = props => {
     city: 'Mahdia',
     country: 'TN',
     timezone: 'GTM',
-    avatar: usersession!=null?usersession.sexe=="H"?'/images/avatars/avatar_7.png':'/images/avatars/avatar_2.png' :""
+    avatar: usersession!=null?usersession.sexe=="M"?'/images/avatars/avatar_7.png':'/images/avatars/avatar_2.png' :""
   };
   
   return (
