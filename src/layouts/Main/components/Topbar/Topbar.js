@@ -60,15 +60,7 @@ const Topbar = props => {
                 <MailIcon />
               </Badge>
             </IconButton>
-          <IconButton color="inherit"  >
-            <Badge
-              badgeContent={12}
-              color="secondary"
-                
-            >
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
+          
           <IconButton
             className={classes.signOutButton}
             color="inherit"
