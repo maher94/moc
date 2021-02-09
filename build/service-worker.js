@@ -14,7 +14,11 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.abb2b0c24dc539b165ba0b645be2b893.js"
+<<<<<<< HEAD
+  "/precache-manifest.212bdca78a00fc4e1ee33f1c48e3740e.js"
+=======
+  "/precache-manifest.114279379cc353f0eddb49592b20f306.js"
+>>>>>>> parent of 80ccb97... delete build project and add a new build project
 );
 
 self.addEventListener('message', (event) => {
