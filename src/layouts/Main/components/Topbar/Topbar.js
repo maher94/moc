@@ -51,15 +51,11 @@ const Topbar = props => {
            <Typography
         className={classes.bio}
         variant="h1"
-      >  <Logo></Logo> </Typography>
+      >   </Typography>
         </RouterLink>
         <div className={classes.flexGrow} />
         <Hidden mdDown>
-        <IconButton aria-label="show 0 new mails" color="inherit">
-              <Badge badgeContent={1} color="secondary">
-                <MailIcon />
-              </Badge>
-            </IconButton>
+        
           
           <IconButton
             className={classes.signOutButton}
