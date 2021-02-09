@@ -23,7 +23,7 @@ export default function OrderProduct2() {
     useEffect(() => {
         async function fetchData() {
              
-            const result = await Axios('http://localhost:4000/stock/getAQOfProduct');
+            const result = await Axios('https://mocbackend.cleverapps.io/stock/getAQOfProduct');
             return result;
         }
         fetchData().then(result => setAQOfProduct(result.data.availablequantity[0].availablequantity));

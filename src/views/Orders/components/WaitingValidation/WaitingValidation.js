@@ -26,7 +26,7 @@ class WaitingValidation extends Component {
       return <Redirect to="/not-found" />
 
     }
-    axios.get('http://localhost:4000/ordersLentille/countLensesOrdersByStatus/' + userId.id + '/' + "WaitingValidation")
+    axios.get('https://mocbackend.cleverapps.io/ordersLentille/countLensesOrdersByStatus/' + userId.id + '/' + "WaitingValidation")
       .then(response => this.setState({ nbLenses: response.data.data[0].nb })
 
       )
@@ -40,7 +40,7 @@ class WaitingValidation extends Component {
     const userId = JSON.parse(localStorage.getItem('user'));
 
 
-    axios.get('http://localhost:4000/ordersProduit/countProductOrdersByStatus/' + userId.id + '/' + "WaitingValidation")
+    axios.get('https://mocbackend.cleverapps.io/ordersProduit/countProductOrdersByStatus/' + userId.id + '/' + "WaitingValidation")
       .then(response => this.setState({ nbProduct: response.data.data[0].nb })
 
       )

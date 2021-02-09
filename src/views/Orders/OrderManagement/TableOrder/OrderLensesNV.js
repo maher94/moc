@@ -23,7 +23,7 @@ export default function OrderLenses2() {
     useEffect(() => {
         async function fetchData() {
              
-            const result = await Axios('http://localhost:4000/stock/getAQOfLenses');
+            const result = await Axios('https://mocbackend.cleverapps.io/stock/getAQOfLenses');
             return result;
         }
         fetchData().then(result => setAQOfLenses(result.data.availablequantity[0].availablequantity));

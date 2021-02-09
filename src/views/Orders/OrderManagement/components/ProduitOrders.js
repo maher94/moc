@@ -132,8 +132,8 @@ class ProduitOrders extends Component {
   };
   createAndDownloadPdf = (orderno) => {
 
-    axios.post('http://localhost:4000/create-pdfProduit', { id: orderno })
-      .then(() => axios.get('http://localhost:4000/fetch-pdfProduit', { responseType: 'blob' }))
+    axios.post('https://mocbackend.cleverapps.io/create-pdfProduit', { id: orderno })
+      .then(() => axios.get('https://mocbackend.cleverapps.io/fetch-pdfProduit', { responseType: 'blob' }))
       .then((res) => {
         const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
 
@@ -143,7 +143,7 @@ class ProduitOrders extends Component {
 
   getOrders = _ => {
     const userId = JSON.parse(localStorage.getItem('user'));
-    fetch('http://localhost:4000/ordersProduit/list/' + userId.id, { headers: authHeader() })
+    fetch('https://mocbackend.cleverapps.io/ordersProduit/list/' + userId.id, { headers: authHeader() })
       .then(response => response.json())
       .then(response => this.setState({ data: response.data }))
       .catch(err => console.error(err))
@@ -178,7 +178,7 @@ class ProduitOrders extends Component {
 
 
     // url de backend
-    const baseUrl = "http://localhost:4000/orders" + OrderType + "/updateStatus/" + orderid
+    const baseUrl = "https://mocbackend.cleverapps.io/orders" + OrderType + "/updateStatus/" + orderid
     // parameter data post
     const datapost = {
       Status: "WaitingValidation",
@@ -215,7 +215,7 @@ class ProduitOrders extends Component {
 
 
     // url de backend
-    const baseUrl = "http://localhost:4000/orders" + OrderType + "/update/" + orderid
+    const baseUrl = "https://mocbackend.cleverapps.io/orders" + OrderType + "/update/" + orderid
     // parameter data post
     if (OrderType == "Produit") {
       const datapost = {
@@ -280,7 +280,7 @@ class ProduitOrders extends Component {
   }
   sendDelete = (userId, OrderType) => {
 
-    const baseUrl = `http://localhost:4000/orders` + OrderType + `/delete/` + userId
+    const baseUrl = `https://mocbackend.cleverapps.io/orders` + OrderType + `/delete/` + userId
 
     axios.get(baseUrl, { headers: authHeader() })
       .then(response => {

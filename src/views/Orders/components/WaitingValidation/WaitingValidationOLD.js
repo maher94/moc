@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
 }));
  
 const nbs =_ =>{
-  axios.get('http://localhost:4000/ordersLentille/countLensesOrdersByStatus/' +2+'/'+"WaitingValidation", )
+  axios.get('https://mocbackend.cleverapps.io/ordersLentille/countLensesOrdersByStatus/' +2+'/'+"WaitingValidation", )
   .then(response => response.data.data[0].nb )   
   
   .catch(function (error) {

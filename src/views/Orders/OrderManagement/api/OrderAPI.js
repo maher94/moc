@@ -4,7 +4,7 @@ import authHeader from 'services/auth-header';
 
 export const sendDelete = (userId, OrderType) => {
 
-  const baseUrl = `http://localhost:4000/orders` + OrderType + `/delete/` + userId
+  const baseUrl = `https://mocbackend.cleverapps.io/orders` + OrderType + `/delete/` + userId
 
   axios.get(baseUrl, { headers: authHeader() })
     .then(response => {
@@ -19,7 +19,7 @@ export const sendDelete = (userId, OrderType) => {
 export const sendCreate = (orderdate, Category, Products, Status, Comment, qte, pss, OrderType, userId,price,paidAmount,partiallyPaidAmount,amountStillToPay) => {
 
   // url de backend
-  const baseUrl = "http://localhost:4000/orders" + OrderType + "/create"
+  const baseUrl = "https://mocbackend.cleverapps.io/orders" + OrderType + "/create"
   // parameter data post
   if (OrderType == "Produit") {
     const datapost = {
@@ -95,7 +95,7 @@ export const updateStatus = (orderid, status,OrderType) => {
 
 
   // url de backend
-  const baseUrl = "http://localhost:4000/orders" + OrderType + "/updateStatus/" + orderid
+  const baseUrl = "https://mocbackend.cleverapps.io/orders" + OrderType + "/updateStatus/" + orderid
   // parameter data post
   const datapost = {
     Status: "WaitingValidation",
@@ -133,7 +133,7 @@ export const sendUpdate = (Orderdate, Category, Products, Status, Comment, qte, 
 
 
   // url de backend
-  const baseUrl = "http://localhost:4000/orders" + OrderType + "/update/" + orderid
+  const baseUrl = "https://mocbackend.cleverapps.io/orders" + OrderType + "/update/" + orderid
   // parameter data post
   if (OrderType == "Produit") {
     const datapost = {
@@ -198,7 +198,7 @@ export const getCountNborders = () => {
 
 
 
-  axios.get('http://localhost:4000/orders/countall', { headers: authHeader() })
+  axios.get('https://mocbackend.cleverapps.io/orders/countall', { headers: authHeader() })
     .then(function (response) {
       // handle success
       if (response.data.success) {
@@ -219,7 +219,7 @@ export const getCountProductOrdersByStatus = (userId,status) => {
 
 
 
-  axios.get('http://localhost:4000/ordersProduit/countProductOrdersByStatus/'+ userId+'/'+status, { headers: authHeader() })
+  axios.get('https://mocbackend.cleverapps.io/ordersProduit/countProductOrdersByStatus/'+ userId+'/'+status, { headers: authHeader() })
     .then(function (response) {
       // handle success
 
@@ -239,7 +239,7 @@ export const countLensesOrdersByStatus = (userId,status) => {
 
 
 
-  axios.get('http://localhost:4000/ordersLentille/countLensesOrdersByStatus/' + userId+'/'+status, { headers: authHeader() })
+  axios.get('https://mocbackend.cleverapps.io/ordersLentille/countLensesOrdersByStatus/' + userId+'/'+status, { headers: authHeader() })
     .then(function (response) {
       // handle success
       if (response.data.success) {

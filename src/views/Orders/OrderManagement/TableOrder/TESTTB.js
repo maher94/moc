@@ -21,7 +21,7 @@ export default function OrderLenses2() {
     
     const getStockLenses = _ => {
              
-        fetch('http://localhost:4000/stock/getAQOfLenses')
+        fetch('https://mocbackend.cleverapps.io/stock/getAQOfLenses')
           .then(response => response.json())
           .then(response => setAQOfLenses(response.availablequantity[0].availablequantity ))
           .catch(err => console.error(err))

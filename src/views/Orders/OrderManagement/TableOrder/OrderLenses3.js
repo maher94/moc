@@ -53,7 +53,7 @@ class OrderLenses extends Component {
         
           getStockLenses = _ => {
              
-            fetch('http://localhost:4000/stock/getAQOfLenses')
+            fetch('https://mocbackend.cleverapps.io/stock/getAQOfLenses')
               .then(response => response.json())
               .then(response => this.setState({ AQOfLenses: response.availablequantity[0].availablequantity }))
               .catch(err => console.error(err))

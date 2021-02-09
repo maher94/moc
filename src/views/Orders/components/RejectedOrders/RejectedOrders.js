@@ -20,7 +20,7 @@ class RejectedOrders extends Component {
     const userId = JSON.parse(localStorage.getItem('user'));
 
 
-    axios.get('http://localhost:4000/ordersLentille/countLensesOrdersByStatus/' + userId.id + '/' + "Rejected")
+    axios.get('https://mocbackend.cleverapps.io/ordersLentille/countLensesOrdersByStatus/' + userId.id + '/' + "Rejected")
       .then(response => this.setState({ nbLenses: response.data.data[0].nb })
 
       )
@@ -34,7 +34,7 @@ class RejectedOrders extends Component {
     const userId = JSON.parse(localStorage.getItem('user'));
 
 
-    axios.get('http://localhost:4000/ordersProduit/countProductOrdersByStatus/' + userId.id + '/' + "Rejected")
+    axios.get('https://mocbackend.cleverapps.io/ordersProduit/countProductOrdersByStatus/' + userId.id + '/' + "Rejected")
       .then(response => this.setState({ nbProduct: response.data.data[0].nb })
 
       )

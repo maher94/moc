@@ -114,7 +114,7 @@ export default function ProductOrders() {
       useEffect(() => {
         async function fetchData() {
             const userId = JSON.parse(localStorage.getItem('user'));
-            const result = await axios('http://localhost:4000/ordersProduit/list/' + userId.id);
+            const result = await axios('https://mocbackend.cleverapps.io/ordersProduit/list/' + userId.id);
             return result;
         }
         fetchData().then(result => setData(result.data.data));
@@ -123,8 +123,8 @@ export default function ProductOrders() {
     }, []);
     const createAndDownloadPdf = (orderno) => {
 
-        axios.post('http://localhost:4000/create-pdfProduit', { id: orderno })
-          .then(() => axios.get('http://localhost:4000/fetch-pdfProduit', { responseType: 'blob' }))
+        axios.post('https://mocbackend.cleverapps.io/create-pdfProduit', { id: orderno })
+          .then(() => axios.get('https://mocbackend.cleverapps.io/fetch-pdfProduit', { responseType: 'blob' }))
           .then((res) => {
             const pdfBlob = new Blob([res.data], { type: 'application/pdf' });
     
@@ -133,7 +133,7 @@ export default function ProductOrders() {
       }
       const sendUpdate = (Orderdate, Category, Products, Status, Comment, qte, volume, orderid, OrderType) => {
 
-        const baseUrl = "http://localhost:4000/orders" + OrderType + "/update/" + orderid
+        const baseUrl = "https://mocbackend.cleverapps.io/orders" + OrderType + "/update/" + orderid
 
 
         const datapost = {
@@ -170,7 +170,7 @@ export default function ProductOrders() {
     }
     const sendDelete = (userId, OrderType) => {
 
-        const baseUrl = `http://localhost:4000/orders` + OrderType + `/delete/` + userId
+        const baseUrl = `https://mocbackend.cleverapps.io/orders` + OrderType + `/delete/` + userId
 
         axios.get(baseUrl, { headers: authHeader() })
             .then(response => {
@@ -186,7 +186,7 @@ export default function ProductOrders() {
     const updateStatus = (orderid, status, OrderType) => {
 
         // url de backend
-        const baseUrl = "http://localhost:4000/orders" + OrderType + "/updateStatus/" + orderid
+        const baseUrl = "https://mocbackend.cleverapps.io/orders" + OrderType + "/updateStatus/" + orderid
         // parameter data post
         const datapost = {
             Status: "WaitingValidation",

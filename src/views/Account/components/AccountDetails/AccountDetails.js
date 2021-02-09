@@ -36,7 +36,7 @@ class AccountDetails extends Component {
 
   getUserDetails = _ => {
     const userNamesession = JSON.parse(localStorage.getItem('user'));
-    fetch('http://localhost:4000/api/user/listByUsername/' + userNamesession.username)
+    fetch('https://mocbackend.cleverapps.io/api/user/listByUsername/' + userNamesession.username)
       .then(response => response.json())
       .then(response => this.setState({ data: response.data }))
       .catch(err => console.error(err))
@@ -46,7 +46,7 @@ class AccountDetails extends Component {
   UpdateUserProfile(FirstName, LastName, email, PhoneNumber, Adresse, Adresse2, country, PostalCode) {
     const userNamesession = JSON.parse(localStorage.getItem('user'));
 
-    const baseUrl = "http://localhost:4000/api/user/updateProfile/" + userNamesession.id
+    const baseUrl = "https://mocbackend.cleverapps.io/api/user/updateProfile/" + userNamesession.id
     const datapost = {
       FirstName: FirstName,
       LastName: LastName,

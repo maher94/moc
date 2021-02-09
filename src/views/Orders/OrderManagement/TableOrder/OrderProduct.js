@@ -52,7 +52,7 @@ class OrderProduct extends Component {
 
   getStockProduct = _ => {
      
-    fetch('http://localhost:4000/stock/getAQOfProduct')
+    fetch('https://mocbackend.cleverapps.io/stock/getAQOfProduct')
       .then(response => response.json())
       .then(response => this.setState({ AQOfProduct:  response.availablequantity[0].availablequantity}))
       .catch(err => console.error(err))
