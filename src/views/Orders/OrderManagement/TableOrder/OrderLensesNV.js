@@ -64,7 +64,7 @@ export default function OrderLenses2() {
            
             if (order.qte > 0) {
                 if (AQOfLenses >= qte) {
-
+                    console.log(order.Orderdate);
                     OrderAPI.sendCreate(order.Orderdate, order.Category, order.Products, "Draft", order.Comment, order.qte, order.pss, "Lentille", userId.id, parseInt(order.qte * 150), 0, 0, parseInt(order.qte * 150))
                     setMessage("information Submited successfully with status Draft  ")
 
