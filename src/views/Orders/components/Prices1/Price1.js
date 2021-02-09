@@ -14,7 +14,7 @@ import {
 const useStyles = makeStyles(theme => ({
   root: {
     height: '100%',
-    backgroundColor: '#ccff33',
+    backgroundColor: '#24F005',
     color: theme.palette.primary.contrastText
   },
   content: { 

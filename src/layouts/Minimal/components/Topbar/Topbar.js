@@ -30,7 +30,7 @@ const Topbar = props => {
            <Typography
            
         variant="h1"
-      > <Logo/> </Typography>
+      >  </Typography>
         </RouterLink>
       </Toolbar>
     </AppBar>
