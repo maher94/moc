@@ -92,7 +92,7 @@ export default function OrderLenses2() {
                 if (order.qte > 0) {
                     if (AQOfLenses >= qte) {
 
-                        OrderAPI.sendCreate(order.OrderDate, order.Category, order.Products, "WaitingValidation", order.Comment, order.qte, order.pss, "Lentille", userId.id, parseInt(order.qte * 150), 0, 0, parseInt(order.qte * 150))
+                        OrderAPI.sendCreate(order.Orderdate, order.Category, order.Products, "WaitingValidation", order.Comment, order.qte, order.pss, "Lentille", userId.id, parseInt(order.qte * 150), 0, 0, parseInt(order.qte * 150))
                         setMessage("information Submited successfully with status Waiting Validation")
 
                     }
