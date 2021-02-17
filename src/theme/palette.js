@@ -4,7 +4,7 @@ const white = '#FFFFFF';
 const black = '#000000';
 const usersession = JSON.parse(localStorage.getItem('user'));
 
-console.log(usersession)
+
 const preveredColor=usersession!=null?usersession.sexe=="F"?colors.pink[500]:colors.indigo[500]:colors.indigo[500]
 
 export default {

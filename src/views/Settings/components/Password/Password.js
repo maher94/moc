@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
+import axios from 'axios';
 import {
   Card,
   CardHeader,
@@ -16,6 +17,22 @@ const useStyles = makeStyles(() => ({
   root: {}
 }));
 
+const updatePassword = (newpassword) => { 
+  const userId = JSON.parse(localStorage.getItem('user'));
+const datapost = {
+  password : newpassword,
+  email :userId.email
+}
+axios.post("http://localhost:4000/api/auth/updatePassword", datapost, {})
+            .then(response => {
+              if (response.data.success) {}
+            }
+            )
+            .catch(error => {
+                alert(error)
+                console.log(error)
+            })
+          }
 const Password = props => {
   const { className, ...rest } = props;
 
@@ -70,6 +87,7 @@ const Password = props => {
           <Button
             color="primary"
             variant="outlined"
+            onClick= { updatePassword(values.password)}
           >
             Update
           </Button>

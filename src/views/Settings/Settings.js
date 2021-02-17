@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/styles';
 import { Grid } from '@material-ui/core';
 
-import { Notifications, Password } from './components';
+import {  Password } from './components';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,18 +17,12 @@ const Settings = () => {
     <div className={classes.root}>
       <Grid
         container
-        spacing={4}
+        spacing={15}
       >
+       
         <Grid
           item
           md={7}
-          xs={12}
-        >
-          <Notifications />
-        </Grid>
-        <Grid
-          item
-          md={5}
           xs={12}
         >
           <Password />
