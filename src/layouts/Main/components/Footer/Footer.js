@@ -24,12 +24,12 @@ const Footer = props => {
         &copy;{' '}
         <Link
           component="a"
-          href="https://moussaoptic.com/"
+          href="https://moussaoptique.com/"
           target="_blank"
         >
          Moussa Optic -- MOC
         </Link>
-        . 2020
+        . 2021
       </Typography>
       <Typography variant="caption">
          

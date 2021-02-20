@@ -238,7 +238,7 @@ export default function LensesOrders() {
                         lookup: { WaitingValidation: "Waiting Validation", Draft: "Draft", Validated: "Validated", InProgress: "In Progress", Suspended: "Suspended", Created: "Created", Rejected: "Rejected", Paid: "Paid", PartiallyPaid: "Partially Paid", Closed: "Closed" }, 
                         cellStyle: (e, rowData) => {
                             
-                          return { backgroundColor:rowData.Status=="WaitingValidation"?"#ffff00":rowData.Status=="Validated"?"greenyellow":rowData.Status=="Rejected"?"#EB3B0C":rowData.Status=="Closed"?"#8F8F8F":rowData.Status=="InProgress"?"#FAA742":rowData.Status=="Suspended"?"#DAFA87":rowData.Status=="Paid"?"#0BDB16":rowData.Status=="PartiallyPaid"?"#81D4BF":"#E7E6E9" };
+                          return { backgroundColor:rowData!=null?rowData.Status=="WaitingValidation"?"#ffff00":rowData.Status=="Validated"?"greenyellow":rowData.Status=="Rejected"?"#EB3B0C":rowData.Status=="Closed"?"#8F8F8F":rowData.Status=="InProgress"?"#FAA742":rowData.Status=="Suspended"?"#DAFA87":rowData.Status=="Paid"?"#0BDB16":rowData.Status=="PartiallyPaid"?"#81D4BF":"#E7E6E9":"#FFF" };
                          
                       },
                     },

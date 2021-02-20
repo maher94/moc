@@ -83,7 +83,7 @@ const AccountProfile = props => {
           />
         </div>
         <div className={classes.progress}>
-          <Typography variant="body1">Profile Completeness: 90%</Typography>
+  { /*<Typography variant="body1">Profile Completeness: 90%</Typography>*/}
           <LinearProgress
             value={90}
             variant="determinate"
@@ -91,8 +91,8 @@ const AccountProfile = props => {
         </div>
       </CardContent>
       <Divider />
-      <CardActions>
-        <Button
+     { /*<CardActions>
+       <Button
           className={classes.uploadButton}
           color="primary"
           variant="text"
@@ -100,7 +100,7 @@ const AccountProfile = props => {
           Upload picture
         </Button>
         <Button variant="text">Remove picture</Button>
-      </CardActions>
+     </CardActions>*/}
     </Card>
   );
 };
